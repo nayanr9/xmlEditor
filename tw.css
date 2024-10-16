@@ -1,0 +1,138 @@
+@media all {
+	/** This is the default style for text **/
+	body { background-color: #FFFFFA; color: black; font-family: tahoma; font-size: 14px; line-height: 24px; white-space: pre-line; word-wrap: break-word; }
+
+	/** These classes are used by core-transforms.xsl in conjunction with editor-tag-styles.xml **/
+	.leftMarginHalfRed      { display: inline; color: #990000; border: none; padding: 0; margin-right: .25em; }
+	.inline          		{ display: inline; }
+	.inlineNoBorder         { display: inline; border: none; padding: 0; margin: 0; }
+	.inlineNoBorderBold     { display: inline; border: none; padding: 0; margin: 0; font-weight: bold;}
+	.leftMarginQuarter      { display: inline; border: none; padding: 0; margin-left: .25em;}
+	.blockStyle             { display: block; border: none; padding: 0; }
+	.greenBlock             { display: block; color: #008000; border: none; padding: 0; }     /* color is green */
+	.goldenrodBlock         { display: block; color: #DAA520; border: none; padding: 0; }
+	.topMarginBlock1        { display: block; margin-top: 1em; padding: 0; border: none; }
+	.topMarginBlockQuarter  { display: block; border: none; margin-top: .25em; padding: 0;}
+	.topMarginBlockIndented { display: block; border: none; margin-top: 1em; margin-left: 1em; padding: 0;}
+	.hvsInfoLabel			{ display: inline; color: #6B6B6B; font-weight: normal; border: none; padding: 0; margin: 0; }
+	.hvsInfoText			{ display: inline; color: #000000; font-weight: bold; border: none; padding: 0; margin: 0; }
+	.queryInfoLabel			{ display: inline; color: #6B6B6B; font-weight: normal; font-size: 12px; border: none; padding: 0; margin: 0; }
+	.queryInfoText			{ display: inline; color: #000000; font-weight: bold; font-size: 12px; border: none; padding: 0; margin: 0; }
+	.creditInfoLabel		{ display: inline; color: #6B6B6B; font-weight: normal; border: none; padding: 0; margin: 0; }
+	.creditInfoText			{ display: inline; color: #000000; font-weight: bold; border: none; padding: 0; margin: 0; }
+	/** End - classes are used by core-transforms.xsl in conjunction with editor-tag-styles.xml **/
+
+	.englishLabel { display: inline; border: 1px solid #888; font-weight: bold; padding: 1px; margin-right: 0.25em; color: #555; white-space: nowrap;}
+	.editorStyledEntity { font-weight: bold; color: green; font-size: 18px; padding-left: 1px; padding-right:1px; }
+	.entity { display:block; color: #316AC5; background-color: #FFFFFA; font-weight: bold; padding: 0; margin-right: .25em; }
+	.tagname { color: #316AC5; background-color: #FFFFFA; font-weight: normal; padding: 0; margin-right: .25em; }
+	.italic { font-style: italic; }
+	.spectre2 { font: bold 18px Spectre2; color: green; padding: 0 1px;}
+	img.markup{ vertical-align: middle; border: none; padding: 0 1px; margin: 0; }
+
+	.hidden {   display: none; position:absolute; left:0; top:-500px; width:0; height:0; overflow:hidden; border: none; padding: 0; margin: 0; }
+	.hidden2 {  display: none; border: none; padding: 0; }
+	.hiddenToggle {   display: none; position:absolute; left:0; top:-500px; width:0; height:0; overflow:hidden; border: none; padding: 0; margin: 0; }
+	.pageBreak {}
+
+	.pageBreakImg { background: url('/cwbEditorWeb/resources/images/pagebreak.jpg') repeat-x; height: 25px; width: 100%;  border:none !important; }
+
+	/** Begin delicate balance of read-write, read-only, excluded, and highlighted styles **/
+	.read-write { background-color: transparent }
+	.read-write .excluded { background-color: #E7E7E7 }
+	.read-write .read-only { background-color: #CCCCCC }
+	.read-write * { background-color: #FFFFFA }
+	.read-write tw\:hint { background-color: #FFFF00; }
+	.excluded { background-color: #E7E7E7 }
+	.excluded .read-only { background-color: #CCCCCC }
+	.excluded .read-write { background-color: #E7E7E7 }
+	.excluded * { background-color: #E7E7E7 }
+	.read-only { background-color: #CCCCCC }
+	.read-only * { background-color: #CCCCCC }
+	.read-only .excluded { background-color: #CCCCCC }
+	.read-only .read-write { background-color: #FFFFFA }
+	.read-only .read-write .excluded { background-color: #E7E7E7 }
+	.read-only .read-write .highlighted { color: #F5F5F5; background-color: #316AC5; }
+	.read-only .read-write * { background-color: #FFFFFA }
+	.read-only tw\:hint { background-color: #FFFF00; }
+	.read-only tw\:source\.note .englishLabel { background-color: #c3d7bf; }
+	.read-only .read-write tw\:hint { background-color: #FFFF00; }
+	.read-only .read-write tw\:source\.note .englishLabel { background-color: #c3d7bf; }
+	.read-only .read-write .excluded * { background-color: #E7E7E7 }
+	.read-only .read-write .highlighted * { color: #F5F5F5; background-color: #316AC5; }
+	.read-only .highlighted { color: #F5F5F5; background-color: #316AC5; }
+	.read-only .highlighted * { color: #F5F5F5; background-color: #316AC5; }
+	.read-write .highlighted { color: #F5F5F5; background-color: #316AC5; }
+	.excluded .highlighted { color: #F5F5F5; background-color: #316AC5; }
+	.highlighted { color: #F5F5F5; background-color: #316AC5; }
+	.highlighted .excluded { color: #F5F5F5; background-color: #316AC5; }
+	.highlighted .read-only { color: #F5F5F5; background-color: #316AC5; }
+	.highlighted .read-write { color: #F5F5F5; background-color: #316AC5; }
+	.highlighted * { color: #F5F5F5; background-color: #316AC5; }
+	.hiddenToggleSubsectionMetadataBlock { }
+	.hiddenToggleSourceFront { }
+	.hiddenToggleSourceEnd { }
+	tw\:law.read-only { background-color: transparent } /* prevents the annoying bleed-through */
+	/** End delicate balance of read-write, read-only, excluded, and highlighted styles **/
+
+	/* Miscellaneous styles - there aren't enough of these that I thought it was worth the time to define a special class for them. */
+	tw\:metadata\.block     { display:inline; border: none; padding: 0; margin-bottom: .15em; font-size: 12px; line-height: 20px; white-space: nowrap;}
+	tw\:md\.mnem	        { display:inline; color: #6B6B6B; border: none; margin-right: 0.25em; padding: 0 0.1em;}
+	tw\:md\.pub\.tag\.info  { display:inline; border: none; padding: 0;}
+	tw\:md\.pub\.tag        { display:inline; color: #D2691E; border: none; margin-left: 0.25em; margin-right: 0.25em; padding: 0 0.1em; white-space: normal;}
+	tw\:md\.pub\.tag.nobreak     { white-space: nowrap;}
+	tw\:md\.pub\.tag.nopub       { display:inline; color: #D2691E; font-weight: bold; border: none; margin-left: 0.25em; margin-right: 0.25em; padding: 0 0.1em; white-space: normal; }
+	tw\:md\.source\.tag 	{ display:inline; color: #006400; border: none; margin-left: 0.25em; margin-right: 0.25em; padding: 0 0.1em; white-space: pre; word-wrap: break-word;}
+	tw\:md\.source\.tag.current  { display:inline; color: #006400; font-weight: bold; border: none; margin-left: 0.25em; margin-right: 0.25em; padding: 0 0.1em; white-space: pre; word-wrap: break-word;}
+	tw\:modified\.by        { display:inline; color: #6B6B6B; border: none; margin-left: 0.25em; margin-right: 0.25em; padding: 0; white-space: pre; word-wrap: break-word;}
+	tw\:modified\.by span   { display:inline; color: #6B6B6B; border: none; margin-left: 0.25em; margin-right: 0.25em; padding: 0; }
+	tw\:md\.reference\.doc\.text { display:inline; color: #6B6B6B; border: none; margin-left: 0.25em; padding: 0 0.1em; white-space: pre; word-wrap: break-word; }
+	tw\:md\.reference\.doc\.text .spectre2 { display:inline; color: #6B6B6B; font: 14px Spectre2; border: none; margin-left: 0.25em; padding: 0 0.1em; }
+	tw\:md\.reference\.loc 				{ display:inline; color: #6B6B6B; border: none; margin-left: 0.25em; padding: 0 0.1em; white-space: pre; word-wrap: break-word; }
+	tw\:md\.reference\.loc .spectre2 	{ display:inline; color: #6B6B6B; font: 14px Spectre2; border: none; margin-left: 0.25em; padding: 0 0.1em; }
+	tw\:md\.head\.info      {display:inline; border: none; padding: 0;}
+	tw\:md\.sn\.info  { display:inline; border: none; padding: 0;}
+	tw\:md\.bill\.track\.edit	        { display:inline; color: #6B6B6B; border: none; margin-right: 0.25em; padding: 0 0.1em;}
+	tw\:md\.previous\.sibling\.index	        { display:inline; color: #6B6B6B; border: none; margin-right: 0.25em; padding: 0 0.1em;}
+	tw\:md\.insertion\.index	        { display:inline; color: #6B6B6B; border: none; margin-right: 0.25em; padding: 0 0.1em;}
+
+	tw\:head\.info          { display:inline; white-space: pre; word-wrap: break-word;}
+	tw\:changes             { display:block; border: none; margin-left: 1em; }
+	tw\:text\.merge\.processing\.instruction { display: block; border: none; margin: 1em 0 0 1.9em; }
+	tw\:scope { display:block; color: #990000; border: none; margin-right: 1em; }   /* Lego red */
+
+	tw\:hint                { display:inline; background-color: #FFFF00; border: none; padding: 0; }
+	tw\:hint.read-write     { background-color: #FFFF00;}
+	tw\:ital                { display:inline; font-style: italic; border:none; padding: 0; margin: 0; }
+	tw\:added\.material     { display:inline; color: blue; text-decoration:underline; border:none; padding: 0; margin: 0; }
+	tw\:underscore          { display:inline; text-decoration:underline; border:none; padding: 0; margin: 0; }
+	tw\:deleted\.material   { display:inline; color: red; text-decoration: line-through; border: none; padding: 0; margin: 0; }
+	tw\:super               { display:inline; vertical-align: super; border: none; padding: 0; margin: 0; }
+	tw\:sub                 { display:inline; vertical-align: sub; border: none; padding: 0; margin: 0; }
+	tw\:footnote\.reference { display:inline; border:none; padding: 0; margin: 0; }
+	tw\:vetoed\.text        { display:inline; text-decoration: overline; border:none; padding: 0; margin: 0; }
+	tw\:strikethru          { display:inline; text-decoration: line-through; border: none; padding: 0; margin: 0; }
+	tw\:ctab                { display:inline; border-style:solid; border-width:1px; border-color: red; padding: 0; margin: 0; }
+
+	/** Make source notes green (like money) **/
+	tw\:source\.split tw\:source\.note .englishLabel { border: 2px solid #387c2b; background-color: #c3d7bf; }
+	tw\:source\.body tw\:source\.note .englishLabel { border: 2px solid #387c2b; background-color: #c3d7bf; }
+	tw\:source\.section tw\:source\.note .englishLabel { border: 2px solid #387c2b; background-color: #c3d7bf; }
+	tw\:delta tw\:source\.note .englishLabel { border: 2px solid #387c2b; background-color: #c3d7bf; }
+
+	/** Indent nested tw elements with English labels unless child of source or section label **/
+	*[display-name] > *[display-name] { margin-left: 1.5em; }
+	tw\:source\.split[display-name] > *[display-name] { margin-left: 0; }
+	tw\:source\.section[display-name] > *[display-name] { margin-left: 0; }
+
+	/** Give a top margin for English labels (except the Exclude label) **/
+	*[display-name] { display: block; margin-top: 1em; padding: 0; border: none; }
+	tw\:md\.exclude\.tag[display-name] { display: inline; border: none; padding: 0; margin-right: .5em;}
+
+	/** Put grey bars around text elements (which are always immediately following siblings of the metadata block) **/
+	tw\:metadata\.block + * { border-left: 3px solid #CCC; border-right: 1px solid #CCC; padding: 0 .25em; }
+
+	/* Digests and classification for Canada content*/
+	tw\:classif\.number {font-weight: bold; margin-left: 6px; margin-right: 6px;}
+	tw\:classif\.value {margin-right: 4px;}
+}
